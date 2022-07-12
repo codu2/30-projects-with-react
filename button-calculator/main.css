@@ -1,0 +1,47 @@
+.btn {
+  width: 48px;
+  height: 48px;
+  background-color: #2699fb;
+  color: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.btn:active {
+  background-color: #007feb;
+}
+
+.btn-lg {
+  width: 100px;
+  height: 48px;
+}
+
+.inp {
+  box-sizing: border-box;
+  width: 204px;
+  height: 48px;
+  padding: 0 20px;
+  outline: none;
+  color: #bcdefd;
+  font-size: 14px;
+}
+
+.inp:disabled {
+  /*버튼 기반 계산기이므로 사용자가 input에 직접 입력할 수 없도록 disabled 처리해줌*/
+  background-color: #fff;
+  border: 1px solid #bce0fd;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  /*.btn에 margin을 줘서 4xp의 gap을 주는 것이 아닌 .row에 display:flex;를 하므로서 gap:4px;를 적용시켜 .btn의 재사용성을 고려함*/
+  margin-bottom: 4px;
+}
