@@ -1,17 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+// import ReactDOM from "react-dom/client"; react v18
+import ReactDOM from "react-dom";
+import "./index.scss";
+import App from "./App";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import musicPlayerReducer from "./store/musicPlayerReducer";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const store = createStore(musicPlayerReducer, composeWithDevTools());
+
+/*
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
+*/
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// @billy-fe/sortable-list와 react 버전을 맞추기 위해 v18.2.0에서 v17.0.2로 다운함
