@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback } from "react";
+import { observer } from "mobx-react";
+import Memo from "./memo/Memo";
+import AddIcon from "@mui/icons-material/Add";
 
-function App() {
+function App({ store }) {
+  const addMemo = useCallback(() => store.addMemo(), [store]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {store.memos.map((memo) => (
+        <Memo key={memo.id} />
+      ))}
+      <AddIcon
+        sx={{
+          float: "right",
+          backgroundColor: "ghostWhite",
+          borderRadius: "5px",
+          cursor: "pointer",
+          fontSize: "30px",
+          border: "1px solid #000",
+        }}
+        onClick={addMemo}
+      />
+    </>
   );
 }
 
-export default App;
+export default observer(App);
