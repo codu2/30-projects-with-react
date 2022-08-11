@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import {
+  Button,
   Table,
   TableBody,
   TableCell,
@@ -10,6 +11,10 @@ import {
 } from "@mui/material";
 import TimetableRow from "./TimetableRow";
 import { withStyles } from "@mui/styles";
+import AddBoxIcon from "@mui/icons-material/AddBox";
+import InputModal from "../inputModal/InputModal";
+import { useRecoilValue } from "recoil";
+import { timeTableState } from "../store/store";
 
 const hourData = Array.from({ length: 11 }, (i, j) => j + 9);
 
@@ -22,6 +27,34 @@ const styles = {
 };
 
 const Timetable = ({ classes }) => {
+  const timeTableData = useRecoilValue(timeTableState);
+  const [showModal, setShowModal] = useState(false);
+  const [editInfo, setEditInfo] = useState({});
+
+  const handleClose = useCallback(() => {
+    setShowModal(false);
+    setEditInfo({});
+  }, []);
+
+  const edit = useCallback(
+    (day, id) => {
+      const { start, end, name, color } = timeTableData[day].find(
+        (lectureInfo) => lectureInfo.id === id
+      );
+
+      setEditInfo({
+        dayData: day,
+        startTimeData: start,
+        endTimeData: end,
+        lectureNameData: name,
+        lectureColorData: color,
+        idNum: id,
+      });
+      setShowModal(true);
+    },
+    [timeTableData]
+  );
+
   return (
     <>
       <TableContainer
@@ -44,6 +77,14 @@ const Timetable = ({ classes }) => {
         >
           강의시간표
         </Typography>
+        <Button
+          variant="contain"
+          sx={{ float: "right" }}
+          endIcon={<AddBoxIcon />}
+          onClick={() => setShowModal(true)}
+        >
+          강의 입력
+        </Button>
         <Table className={classes.Table}>
           <TableHead>
             <TableRow>
@@ -73,12 +114,17 @@ const Timetable = ({ classes }) => {
                 <TableCell align="center">
                   {`${time}:00 ~ ${time + 1}:00`}
                 </TableCell>
-                <TimetableRow timeNum={time} />
+                <TimetableRow timeNum={time} Edit={edit} />
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
+      <InputModal
+        showModal={showModal}
+        handleClose={handleClose}
+        {...editInfo}
+      />
     </>
   );
 };
