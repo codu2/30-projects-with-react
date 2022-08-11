@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState, memo } from "react";
 import { TableCell } from "@mui/material";
 import { useRecoilState } from "recoil";
 import { timeTableState } from "../store/store";
@@ -79,4 +79,4 @@ const TimetableCell = ({ day, timeNum, Edit }) => {
   );
 };
 
-export default TimetableCell;
+export default memo(TimetableCell);
