@@ -1,0 +1,99 @@
+<mxfile host="65bd71144e">
+    <diagram id="OQ2Wq6yVgR0pIKN3SvFQ" name="Page-1">
+        <mxGraphModel dx="717" dy="542" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="메인 화면&lt;br&gt;(랜덤 명언 띄우기)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="240" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="4" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="4" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="4" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="4" target="35">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="명언 목록" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="370" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="명언 수정" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="32.5" y="520" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="명언 제거" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="217.5" y="520" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="예외상황1. 명언 목록의 길이가 0일 때" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="180" width="190" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="사이트맵" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="160" y="180" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="14">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="520" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="14">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="675" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="명언 목록의 길이가&amp;nbsp;&lt;br&gt;0일때" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="210" width="170" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="메인 화면에서&lt;br&gt;랜덤 명언 출력" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="220" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="N" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="230" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="메인화면에서&lt;br&gt;&quot;명언이 없습니다&quot;&lt;br&gt;출력" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="615" y="340" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Y" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="300" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="예외상황2. 네트워크 연결 오류로 인하여 명언을 가져오지 못할 때" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="480" width="320" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="29">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="520" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="29">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="675" y="640" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="네트워크 오류로&lt;br&gt;명언을 가져오지 못함" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="510" width="170" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="메인 화면에서&lt;br&gt;랜덤 명언 출력" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="520" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="N" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="530" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="메인화면에서&lt;br&gt;&quot;명언을 불러오지 못했습니다&quot;&lt;br&gt;출력" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="597.5" y="640" width="155" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Y" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="600" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="명언 추가" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="630" width="140" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
