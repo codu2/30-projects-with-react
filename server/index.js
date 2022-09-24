@@ -93,10 +93,12 @@ app.post("/", (req, res) => {
 
   const note = {
     content: content,
+    id: data.length,
     created_at: Date.now(),
     updated_at: null,
     deleted_at: null,
   };
+  tmp = "";
 
   data.push(note);
 
